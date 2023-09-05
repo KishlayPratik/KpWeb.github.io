@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+
+    <style>
+        
+        .preloader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Background color of the preloader */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+    
+        .letters-kishlay {
+            font-size: 36px;
+            color: #ffffff; /* Color of the letters */
+            animation: lettersKishlayAnimation 2s ease-in-out infinite; /* Letters "Kishlay" animation */
+        }
+
+        /* Styles for the letters "Pratik" */
+        .letters-pratik {
+            font-size: 36px;
+            color: #ffffff; /* Color of the letters */
+            animation: lettersPratikAnimation 2s ease-in-out infinite; /* Letters "Pratik" animation */
+        }
+
+        /* Keyframes animation for the letters "Kishlay" */
+        @keyframes lettersKishlayAnimation {
+            0%, 100% {
+                opacity: 0; /* Fully transparent at the start and end */
+                transform: translateY(0); /* Initial position */
+            }
+            50% {
+                opacity: 1; /* Fully visible in the middle */
+                transform: translateY(-50px); /* Move upward in the middle */
+            }
+        }
+
+        /* Keyframes animation for the letters "Pratik" */
+        @keyframes lettersPratikAnimation {
+            0%, 100% {
+                opacity: 0; /* Fully transparent at the start and end */
+                transform: translateY(0); /* Initial position */
+            }
+            50% {
+                opacity: 1; /* Fully visible in the middle */
+                transform: translateY(-50px); /* Move upward in the middle */
+            }
+        }
+         .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            
+            width: 100%;
+            height: 100%;
+          
+        }
+
+        .logo img {
+            width: 55px; 
+            height: 50px;
+            position: absolute;
+            top: 30px;
+            right: 1250px;
+        }
+
+       
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: absolute;
+            top: 25px;
+            left: 950px;
+        }
+
+        /* Style for the navigation links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: rgb(211, 247, 13);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Style for the navigation links on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .custom-hr{
+            width: 2390px;
+            height: 4px;
+            background-color: #ff000000;
+            position: absolute;
+            top: 80px;
+            left: auto;
+
+        }
+          
+        .neon-text {
+            color: #bbff00; /* Set the text color to white */
+            text-shadow: 0 0 10px rgb(58, 58, 65)rgb(38, 38, 80)0 20px #00f, 0 0 30px rgb(99, 99, 122); /* Add multiple shadows to create the glow effect */
+            font-size: 16px; /* Set the font size as needed */
+            font-family: "Arial", sans-serif; /* Use your preferred font */
+            text-transform: uppercase;
+            position: relative;
+        }   
+         
+        .neon-text::before {
+            content: attr(data-text); /* Get the text content */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: rgb(21, 21, 22);
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            animation: neon 3s ease-in-out infinite alternate;
+        }
+        @keyframes neon {
+            0% {
+                opacity: 0.5;
+                text-shadow: 0 0 10px rgb(44, 44, 46), 0 0 20px rgb(150, 150, 160), 0 0 30px rgb(191, 191, 201);
+            }
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 10px rgb(0, 0, 0), 0rgb(122, 122, 134) 60, 65, 0 0 30px rgb(203, 203, 209), 0 0 40px rgb(96, 96, 119), 0 0 50px #00f;
+            }
+        }
+        body {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+              
+        }
+        table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        table {
+            margin: 0 auto;
+            background-image: url('kp1.jpg');
+            opacity: 0.8;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 200px;
+            left: 460px;
+            height: 400px;
+            border-collapse: collapse;
+            width: 410px;
+
+        }
+        td {
+            white-space: pre-nowrap;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px; /* Add padding for better visual appearance */
+           
+        }
+        
+    
+        /* Style the image and control opacity */
+        td img {
+            max-width: 100%;
+            height: auto;
+            width: 100%; /* Ensure the image fills the cell */
+            opacity: 0.5; /* Adjust opacity as needed (0.0 to 1.0) */
+        }
+    
+        
+    </style>
+    
+    
+</head>
+
+<body background="bg.jpg" style ="background-repeat:no-repeat;background-size: 100% ">
+  
+   
+    <div class="preloader-container">
+        
+        
+        <div class="letters-kishlay">Kishlay</div>
+        <div class="letters-pratik">Pratik</div>
+    </div>
+
+    <!-- Your main page content (Initially hidden) -->
+    <div id="main-content" style="display: none;">
+    
+       
+    <script>
+        // JavaScript to hide the preloader and show the main content when the page is fully loaded
+        setTimeout(function () {
+            const preloader = document.querySelector(".preloader-container");
+            const mainContent = document.getElementById("main-content");
+            
+            // Hide the preloader
+            preloader.style.display = "none";
+            
+            // Show the main content
+            mainContent.style.display = "block";
+        }, 2000);
+    </script>
+
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+
+
+            
+            <div class="navbar">
+                <a href="home.html">Home</a>
+                <a href="about.html">About US</a>
+                <a href="https://www.youtube.com/channel/UChBD71K0U_CsFCIDJKTrL6Q">YOUTUBE</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+
+    
+     <hr class="custom-hr">
+     <div class="table-container">
+     <table>
+     
+     <tr>
+         
+             <td class="neon-text" > Hello, I am Kishlay Pratik, <br>
+                a student currently studying in Class 10 B <br>
+                at Kendriya Vidyalaya. I hail from <br>
+                the vibrant city of Patna <br>
+                 I have a deep passion for exploration and<br>
+                 love discovering new things. Coding and <br>
+                 solving puzzles are not just hobbies for me;<br> 
+                 they're a part of my identity. I take great<br>
+                  pleasure in unraveling complex problems and<br>
+                    creating solutions. Currently, I'm working <br>
+                    on an exciting 
+                   < project that I'm eager <br>to share with you. </td>>
+           
+         
+     </tr>
+ </table>
+    </div>
+
+
+     
+</body>
+</html>
